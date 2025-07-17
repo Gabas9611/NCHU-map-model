@@ -108,7 +108,7 @@
             width: calc(100% - 300px);
             max-height: 90vh;
             position: fixed;
-            left: 275px;
+            left: 575px;
             top: 50%;
             transform: translateY(-50%);
             display: flex;
@@ -225,8 +225,9 @@
         /* 手機版響應式設計 (768px以下) */
         @media (max-width: 768px) {
             body {
-                flex-direction: column;
-                padding: 0;
+                position: relative;
+                min-height: 100vh;
+                margin: 0;
             }
 
             .menu-toggle {
@@ -305,16 +306,16 @@
             }
 
             .main-content-box {
-                position: relative;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 width: 90%;
                 max-width: 100%;
-                margin: 20px auto;
-                /* ✅ 水平垂直置中 */
-                left: auto;
-                top: auto;
-                transform: none;
                 padding: 20px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                background-color: rgba(255, 255, 255, 0.95);
+                border-radius: 10px;
             }
 
             .main-content-box h1 {
@@ -445,6 +446,7 @@
             <li><a href="#" id="nchu-map">地圖導覽</a></li>
         </ul>
     </div>
+    
 
     <!-- 主內容區域 -->
     <div class="main-content-box" id="main-content">
